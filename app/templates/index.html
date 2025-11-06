@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>People Form</title>
+</head>
+<body>
+    <h1>Add Person</h1>
+    <form method="POST">
+        Name: <input type="text" name="name" required><br>
+        Email: <input type="email" name="email"><br>
+        <input type="submit" value="Add">
+    </form>
+
+    <h2>People in DB</h2>
+    <ul>
+        {% for person in people %}
+            <li>{{ person.name }} - {{ person.email }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
